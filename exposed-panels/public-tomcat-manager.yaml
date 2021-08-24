@@ -17,6 +17,8 @@ requests:
       - type: word
         words:
           - Apache Tomcat
+          - 401 Unauthorized
+        condition: or
       - type: status
         status:
           - 401
