@@ -39,8 +39,13 @@ dns:
           - "redis.cache.windows.net"
           - "search.windows.net"
           - "servicebus.windows.net"
-          - "trafficmanager.net"
           - "visualstudio.com"
       - type: word
         words:
           - "NXDOMAIN"
+
+    extractors:
+      - type: regex
+        group: 1
+        regex:
+          - "IN\tCNAME\t(.+)"
