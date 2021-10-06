@@ -15,35 +15,22 @@ requests:
         Origin: {{BaseURL}}
         Referer: {{BaseURL}}/libs/granite/core/content/login.html
 
-        _charset_=utf-8&j_username={{rr_username}}&j_password={{rr_password}}&j_validate=true
+        _charset_=utf-8&j_username={{username}}&j_password={{password}}&j_validate=true
 
     payloads:
-
-      rr_username:
+      username:
         - admin
         - grios
         - replication-receiver
         - vgnadmin
-        - aparker@geometrixx.info
-        - jdoe@geometrixx.info
-        - james.devore@spambob.com
-        - matt.monroe@mailinator.com
-        - aaron.mcdonald@mailinator.com
-        - jason.werner@dodgit.com
 
-      rr_password:
+      password:
         - admin
         - password
         - replication-receiver
         - vgnadmin
-        - aparker
-        - jdoe
-        - password
-        - password
-        - password
-        - password
 
-    attack: pitchfork  # Available options: sniper, pitchfork and clusterbomb
+    attack: pitchfork
     stop-at-first-match: true
     matchers-condition: and
     matchers:

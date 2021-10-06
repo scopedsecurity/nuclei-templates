@@ -9,6 +9,18 @@ info:
   tags: idemia,biometrics,default-login
 
 requests:
+  - raw:
+      - |
+        POST /cgi-bin/login.cgi HTTP/1.1
+        Host: {{BaseURL}}
+
+        password={{password}}
+
+    payloads:
+      password:
+        - 12345
+    attack: sniper
+
   - method: POST
     path:
       - '{{BaseURL}}/cgi-bin/login.cgi'
